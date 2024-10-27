@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import re
 import time
 from pprint import pprint
-
+import json
 
 
 link = f"https://onefootball.com/en/competition/premier-league-9/table"
@@ -20,4 +20,8 @@ table.append("  ________________ PL W D L GD PTS")
 for i in range(len(tab)):
     table.append(tab[i].text.strip())
 
-pprint(table)
+#pprint(table)
+file = open("table.txt", "w")
+file.write(table)
+file.close()
+
