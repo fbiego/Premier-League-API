@@ -44,8 +44,11 @@ for i in range(len(tab)):
 
 #pprint(table)
 
-file = open("table.txt", "w")
+#file = open("table.txt", "w")
 
-file.write(table)
+#file.write(table)
 
-file.close()
+#file.close()
+
+with open("table.json", "w") as outfile:
+    json.dump(table, outfile, indent=4)
